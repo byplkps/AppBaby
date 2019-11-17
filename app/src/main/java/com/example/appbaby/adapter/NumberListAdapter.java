@@ -14,19 +14,19 @@ import androidx.annotation.Nullable;
 import java.util.List;
 
 import com.example.appbaby.R;
-import com.example.appbaby.model.Thai;
+import com.example.appbaby.model.Number;
 
-public class ThaiListAdapter extends ArrayAdapter<Thai> {
+public class NumberListAdapter extends ArrayAdapter<Number> {
 
     private Context mContext;
     private int mResource;
-    private List<Thai> mThaiList;
+    private List<Number> mNumberList;
 
-    public ThaiListAdapter(@NonNull Context context, int resource, @NonNull List<Thai> thaiList) {
-        super(context, resource, thaiList);
+    public NumberListAdapter(@NonNull Context context, int resource, @NonNull List<Number> numberList) {
+        super(context, resource, numberList);
         this.mContext = context;
         this.mResource = resource;
-        this.mThaiList = thaiList;
+        this.mNumberList = numberList;
     }
 
     @NonNull
@@ -41,18 +41,18 @@ public class ThaiListAdapter extends ArrayAdapter<Thai> {
         }
 
         // เข้าถึงออบเจ็ค Thai ตาม position ที่ ListView ขอมา
-        Thai Thai = mThaiList.get(position);
+        Number Number = mNumberList.get(position);
 
         // กำหนดชื่อสถานที่ลงใน TextView (category_name_text_view)
-        TextView thaiTextView = v.findViewById(R.id.category_name_text_view);
-        thaiTextView.setText(Thai.category);
+        TextView numberTextView = v.findViewById(R.id.category_name_text_view);
+        numberTextView.setText(Number.category);
 
         // กำหนดชื่ออำเภอลงใน TextView (description_text_view)
-       // TextView districtTextView = v.findViewById(R.id.description_text_view);
+        // TextView districtTextView = v.findViewById(R.id.description_text_view);
         //districtTextView.setText("รายละเอียด".concat(Thai.description));
 
         ImageView logoImageView = v.findViewById(R.id.logo_image_view);
-        logoImageView.setImageResource(Thai.imageRes);
+        logoImageView.setImageResource(Number.imageRes);
 
         return v;
     }

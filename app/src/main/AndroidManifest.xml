@@ -23,6 +23,12 @@
             android:name=".InAlphaEng"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".AlphabetNumber"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InAlphaNumber"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button meanButton = findViewById(R.id.az_button);
-        meanButton.setOnClickListener(new View.OnClickListener() {
+        Button engButton = findViewById(R.id.az_button);
+        engButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AlphabetEng.class);
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button careButton = findViewById(R.id.thai_button);
-        careButton.setOnClickListener(new View.OnClickListener() {
+        Button thaiButton = findViewById(R.id.thai_button);
+        thaiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AlphabetThai.class);
@@ -48,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button numButton = findViewById(R.id.num_button);
+        numButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AlphabetNumber.class);
+                intent.putExtra("type", 0);
+                startActivity(intent);
+            }
+        });
+
     }
 }
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".MainActivity"
     tools:ignore="HardcodedText">
 
@@ -11,8 +12,8 @@
         android:id="@+id/thai_button"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/kortohor"
@@ -22,7 +23,7 @@
         Thai:layout_constraintHorizontal_chainStyle="packed"
         Thai:layout_constraintStart_toEndOf="@+id/az_button"
         Thai:layout_constraintTop_toTopOf="@+id/az_button"
-        Thai:layout_constraintVertical_bias="0.0" />
+        Thai:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/az_button"
@@ -30,12 +31,28 @@
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/atoz"
-        Thai:layout_constraintBottom_toBottomOf="parent"
+        Thai:layout_constraintBottom_toTopOf="@+id/num_button"
         Thai:layout_constraintEnd_toStartOf="@+id/thai_button"
         Thai:layout_constraintHorizontal_bias="0.5"
         Thai:layout_constraintHorizontal_chainStyle="packed"
         Thai:layout_constraintStart_toStartOf="parent"
         Thai:layout_constraintTop_toTopOf="parent"
-        Thai:layout_constraintVertical_bias="0.23" />
+        Thai:layout_constraintVertical_bias="0.6"
+        Thai:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/num_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/onetoten"
+        Thai:layout_constraintBottom_toBottomOf="parent"
+        Thai:layout_constraintEnd_toEndOf="@+id/az_button"
+        Thai:layout_constraintStart_toStartOf="@+id/az_button"
+        Thai:layout_constraintTop_toBottomOf="@+id/az_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

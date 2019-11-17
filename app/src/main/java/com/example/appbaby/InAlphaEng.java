@@ -22,8 +22,8 @@ public class InAlphaEng extends AppCompatActivity {
         ImageView coverImageView = findViewById(R.id.cover_image_view);
         coverImageView.setImageResource(categoryImageRes);
 
-        TextView placeNameTextView = findViewById(R.id.category_name_text_view);
-        placeNameTextView.setText(categoryName);
+        TextView engNameTextView = findViewById(R.id.category_name_text_view);
+        engNameTextView.setText(categoryName);
     }
 
 
