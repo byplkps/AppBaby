@@ -52,7 +52,7 @@ public class DatabaseHelper2 extends SQLiteOpenHelper {
         cv = new ContentValues();
         cv.put(COL_CATEGORY2, "ฃ");
         cv.put(COL_DESCRIPTION2, "อักษร ฃ \n" +
-                "เป็นพยัญชนะไทยต ตัวที่ 3 ");
+                "เป็นพยัญชนะไทย ตัวที่ 3 ");
         cv.put(COL_IMAGE2, R.drawable.aa3);
         db.insert(TABLE_THAI, null, cv);
 
