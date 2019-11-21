@@ -1,6 +1,4 @@
-/*
 package com.example.appbaby.room_db;
-
 
 import android.content.Context;
 
@@ -8,14 +6,15 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.appbaby.model.Thai;
+import com.example.appbaby.model.Diary;
 
-@Database(entities = {Thai.class}, exportSchema = false, version = 1)
+
+@Database(entities = {Diary.class}, exportSchema = false, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
 
-    private static final String DB_NAME = "Thai.db";
+    private static final String DB_NAME = "diary.db";
 
-    public abstract AppDao appDao();
+    public abstract DiaryDao diaryDao();
 
     private static AppDatabase mInstance;
 
@@ -32,4 +31,3 @@ public abstract class AppDatabase extends RoomDatabase {
         return mInstance;
     }
 }
-*/
